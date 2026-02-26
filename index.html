@@ -757,8 +757,24 @@
 
   // ── FORM SUBMIT ──
   function submitForm() {
-    alert('Thank you for your enquiry!\nWe will contact you within 24 hours.\n\nFor urgent queries call: +91 9284358304');
+  const name = document.querySelector('input[type="text"]').value;
+  const phone = document.querySelector('input[type="tel"]').value;
+  const email = document.querySelector('input[type="email"]').value;
+  const service = document.querySelector('select').value;
+  const message = document.querySelector('textarea').value;
+
+  if (!name || !phone) {
+    alert('Please fill Name and Phone Number!');
+    return;
   }
+
+  const text = `🔧 *New Enquiry - Sushila Engineering Works*\n\n` +
+    `👤 *Name:* ${name}\n` +
+    `📞 *Phone:* ${phone}\n` +
+    `📧 *Email:* ${email || 'Not provided'}\n` +
+    `🔩 *Service:* ${service || 'Not selected'}\n` +
+    `💬 *Message:* ${message || 'No message'}\n\n` +
+    `_Sent from SEW Website_`;
 
   const encodedText = encodeURIComponent(text);
   window.open(`https://wa.me/919284358304?text=${encodedText}`, '_blank');
