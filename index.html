@@ -53,12 +53,6 @@
   background:url('images/workshop.jpg') center/cover no-repeat;
   z-index:0;
 }
-    .hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg, rgba(10,21,32,0.80) 0%, rgba(13,27,42,0.70) 50%, rgba(10,21,32,0.75) 100%);
-  z-index:1;
-}
     .hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(244,124,32,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(244,124,32,0.8) 1px,transparent 1px);background-size:60px 60px;}
     .hero-glow{position:absolute;top:-100px;right:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(26,110,160,0.25) 0%,transparent 70%);pointer-events:none;}
     .hero-glow2{position:absolute;bottom:-50px;left:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(244,124,32,0.12) 0%,transparent 70%);pointer-events:none;}
@@ -346,8 +340,16 @@
   <!-- HERO -->
   <section id="home" style="padding-top:66px;position:relative;overflow:hidden;min-height:100vh;">
 <div class="hero-bg"></div>
-<div class="hero-overlay"></div>
-<div class="hero-grid" style="z-index:2;"></div>
+
+<!-- Dark Overlay -->
+<div style="position:absolute;
+            inset:0;
+            background:linear-gradient(
+            rgba(10,21,32,0.75),
+            rgba(10,21,32,0.85));
+            z-index:1;">
+</div>
+<div class="hero-grid"></div>
     <div class="hero-glow"></div>
     <div class="hero-glow2"></div>
     <div class="hero-content">
@@ -631,7 +633,7 @@
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Jalgaon Office (HQ)</h4><p>Pl. no. 17, Veer Savarkar Nagar, behind Talati office, Nisarg Colony, Pimprala, Jalgaon, Maharashtra 425001</p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-city"></i></div><div><h4>Pune Office</h4><p>Atlas Millennium, A 601, Tathavade, PCMC, Pune, Maharashtra 411033</p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone Numbers</h4><p><a href="tel:+919284358304">+91 9284358304</a><br><a href="tel:+919158406806">+91 9158406806</a><br><a href="tel:+917972465550">+91 7972465550</a><br><a href="tel:+919821297745">+91 9821297745</a></p></div></div>
-          <div class="ci-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="/cdn-cgi/l/email-protection#134066607b7a7f72767d747a7d7676617a7d746453747e727a7f3d707c7e"><span class="__cf_email__" data-cfemail="c89bbdbba0a1a4a9ada6afa1a6adadbaa1a6afbf88afa5a9a1a4e6aba7a5">[email&#160;protected]</span></a></p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:Sushilaengineeringw@gmail.com">Sushilaengineeringw@gmail.com</a></p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><h4>Business Hours</h4><p>Monday – Saturday: 10:00 AM – 6:00 PM<br><span style="color:#f44336;">Sunday: Closed</span></p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fab fa-whatsapp" style="color:#25d366;font-size:1.1rem;"></i></div><div><h4>WhatsApp</h4><p><a href="https://wa.me/919284358304" target="_blank">Chat with us on WhatsApp →</a></p></div></div>
           <div class="indiamart-strip" style="margin-top:0;">
@@ -697,7 +699,7 @@
         <p>Industrial Service Partner &amp; Trusted Compressor Supplier. Serving Maharashtra with precision, reliability, and decades of expertise.</p>
         <div class="social-links">
           <a href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank" title="IndiaMart"><i class="fas fa-store"></i></a>
-          <a href="/cdn-cgi/l/email-protection#1b486e687372777a7e757c72757e7e6972757c6c5b7c767a727735787476" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:Sushilaengineeringw@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://wa.me/919284358304" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           <a href="tel:+919284358304" title="Call"><i class="fas fa-phone"></i></a>
         </div>
@@ -730,7 +732,7 @@
         <div class="footer-contact-item"><i class="fas fa-city"></i><span>Tathavade, PCMC, Pune 411033</span></div>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919284358304">+91 9284358304</a></span></div>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919158406806">+91 9158406806</a></span></div>
-        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="/cdn-cgi/l/email-protection#6f3c1a1c0706030e0a010806010a0a1d060108182f08020e0603410c0002"><span class="__cf_email__" data-cfemail="d380a6a0bbbabfb2b6bdb4babdb6b6a1babdb4a493b4beb2babffdb0bcbe">[email&#160;protected]</span></a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:Sushilaengineeringw@gmail.com">Sushilaengineeringw@gmail.com</a></span></div>
         <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 10AM – 6PM</span></div>
       </div>
     </div>
@@ -753,7 +755,7 @@
   </a>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── PAGE NAVIGATION ──
   function showPage(page) {
     document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
@@ -801,4 +803,16 @@
   });
 
   // ── FADE IN ON SCROLL ──
-  const observer = new IntersectionObserver((entrie
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── NAV ACTIVE ON SCROLL (home page sections) ──
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    nav.style.boxShadow = window.scrollY > 10 ? '0 4px 30px rgba(0,0,0,0.5)' : 'none';
+  });
+</script>
+</body>
+</html>
