@@ -334,7 +334,20 @@
 
   <!-- HERO -->
   <section id="home" style="padding-top:66px;position:relative;overflow:hidden;min-height:100vh;">
-<div class="hero-bg" style="position:absolute;inset:0;background-image:url('images/workshop.jpg');background-size:cover;background-position:center;opacity:0.4;"></div>
+<div class="hero-bg" 
+     style="position:absolute;
+            inset:0;
+            background:url('images/workshop.jpg') center/cover no-repeat;">
+</div>
+
+<!-- Dark Overlay -->
+<div style="position:absolute;
+            inset:0;
+            background:linear-gradient(
+            rgba(10,21,32,0.75),
+            rgba(10,21,32,0.85));
+            z-index:1;">
+</div>
 <div class="hero-grid"></div>
     <div class="hero-glow"></div>
     <div class="hero-glow2"></div>
