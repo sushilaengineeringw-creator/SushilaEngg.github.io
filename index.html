@@ -46,12 +46,18 @@
     .hamburger span{width:26px;height:2px;background:var(--light);border-radius:2px;transition:0.3s;}
 
     /* ── HERO ── */
-    #home{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:66px;}
     .hero-bg{
   position:absolute;
   inset:0;
   background:url('images/back.jpg') center/cover no-repeat;
   z-index:0;
+}
+
+.hero-bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.2); /* dark overlay */
 }
 .about-page-bg{
   position:absolute;
