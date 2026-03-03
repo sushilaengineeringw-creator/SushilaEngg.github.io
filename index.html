@@ -177,12 +177,37 @@
     /* ── SERVICES ── */
     #services{background:var(--deep);}
     .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
-    .service-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:28px;transition:all 0.3s;position:relative;overflow:hidden;}
+    .service-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:20px;
+  transition:all 0.3s;
+  position:relative;
+  overflow:hidden;
+}
+    /* Service Image Thumbnail */
+.service-img{
+  height:180px;
+  overflow:hidden;
+  border-radius:6px;
+  margin-bottom:18px;
+}
+
+.service-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.4s ease;
+}
+
+.service-card:hover .service-img img{
+  transform:scale(1.08);
+}
     .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
     .service-card:hover::before{transform:scaleX(1);}
     .service-card:hover{border-color:var(--orange);transform:translateY(-3px);}
-    .sc-icon{width:54px;height:54px;background:rgba(244,124,32,0.1);border:1px solid rgba(244,124,32,0.3);border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-    .sc-icon i{color:var(--orange);font-size:1.4rem;}
+    
     .service-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.5px;margin-bottom:10px;}
     .service-card p{font-size:0.83rem;color:var(--muted);line-height:1.65;}
 
@@ -636,7 +661,14 @@
         <p class="section-subtitle">From installation to ongoing maintenance — SEW covers every aspect of your industrial service requirements.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card"><div class="sc-icon"><i class="fas fa-plug"></i></div><h3>Transformer Installation</h3><p>Expert testing and efficient installation of transformers, ensuring their proper functionality and safe integration within various systems for uninterrupted operations.</p></div>
+        <div class="service-card">
+  <div class="service-img">
+    <img src="images/transformer.jpg" alt="Transformer Installation">
+  </div>
+
+  <h3>Transformer Installation</h3>
+  <p>Expert testing and efficient installation of transformers.</p>
+</div>
         <div class="service-card"><div class="sc-icon"><i class="fas fa-project-diagram"></i></div><h3>Compressor Piping</h3><p>Expert pneumatic piping services, designing and laying out industrial piping systems for air compressors utilizing GI, Aluminum, MS, or SS and PEX for optimal performance and durability.</p></div>
         <div class="service-card"><div class="sc-icon"><i class="fas fa-shield-alt"></i></div><h3>Earthing Installation</h3><p>Professional setup and installation of grounding systems to ensure electrical safety and prevent potential hazards caused by improper or absent grounding in industrial facilities.</p></div>
         <div class="service-card"><div class="sc-icon"><i class="fas fa-cloud-bolt"></i></div><h3>Lightning Protection System</h3><p>Skillful installation of lightning protection systems to safeguard structures and equipment from the damaging effects of lightning strikes. NFPA compliant installations.</p></div>
