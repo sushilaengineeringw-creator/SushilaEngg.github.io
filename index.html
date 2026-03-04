@@ -4,10 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="favicon.ico">
-<meta name="theme-color" content="#f47c20">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <meta name="theme-color" content="#f47c20">
+  <!-- Preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://www.indiamart.com">
+  <link rel="dns-prefetch" href="https://wa.me">
+  <!-- Preload hero background image (LCP) -->
+  <link rel="preload" as="image" href="images/about.jpg">
+  <!-- Fonts – non-render-blocking -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+  <!-- Font Awesome – async / non-render-blocking -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   <style>
     :root {
       --steel: #0d1b2a;
@@ -38,9 +50,9 @@
     .logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;letter-spacing:1px;line-height:1.1;}
     .logo-text span{color:var(--orange);display:block;font-size:0.7rem;font-weight:600;letter-spacing:3px;}
     .nav-links{display:flex;gap:4px;list-style:none;}
-    .nav-links a{color:var(--light);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:all 0.25s;}
+    .nav-links a{color:var(--light);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:color 0.25s,background 0.25s;}
     .nav-links a:hover,.nav-links a.active{color:var(--orange);background:rgba(244,124,32,0.1);}
-    .nav-cta{background:var(--orange);color:#fff;padding:10px 22px;border-radius:3px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;transition:all 0.25s;white-space:nowrap;}
+    .nav-cta{background:var(--orange);color:#fff;padding:10px 22px;border-radius:3px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;transition:background 0.25s,transform 0.25s;white-space:nowrap;}
     .nav-cta:hover{background:var(--orange2);transform:translateY(-1px);}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
     .hamburger span{width:26px;height:2px;background:var(--light);border-radius:2px;transition:0.3s;}
@@ -112,7 +124,7 @@
     .stat-label{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
     .hero-visual{position:relative;}
     .hero-card-stack{display:flex;flex-direction:column;gap:16px;}
-    .hero-feature-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;display:flex;align-items:center;gap:16px;transition:all 0.3s;animation:slideInRight 0.6s ease both;}
+    .hero-feature-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;display:flex;align-items:center;gap:16px;transition:border-color 0.3s,transform 0.3s;animation:slideInRight 0.6s ease both;}
     .hero-feature-card:nth-child(2){animation-delay:0.1s;}
     .hero-feature-card:nth-child(3){animation-delay:0.2s;}
     .hero-feature-card:nth-child(4){animation-delay:0.3s;}
@@ -162,7 +174,7 @@
     /* ── PRODUCTS ── */
     #products{background:var(--steel);}
     .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
-    .product-card{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:all 0.3s;cursor:pointer;}
+    .product-card{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;cursor:pointer;}
     .product-card:hover{border-color:var(--orange);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.4);}
     .product-img{height:160px;background:linear-gradient(135deg,var(--deep),var(--card));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
     .product-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,0.5));}
@@ -182,7 +194,7 @@
   border:1px solid var(--border);
   border-radius:8px;
   padding:20px;
-  transition:all 0.3s;
+  transition:border-color 0.3s,transform 0.3s;
   position:relative;
   overflow:hidden;
 }
@@ -214,7 +226,7 @@
     /* ── VIDEOS ── */
     #videos{background:var(--steel);}
     .videos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
-    .video-card{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:all 0.3s;cursor:pointer;}
+    .video-card{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;}
     .video-card:hover{border-color:var(--orange);transform:translateY(-3px);}
     .video-thumb{height:130px;background:linear-gradient(135deg,#0a1520,#142030);display:flex;align-items:center;justify-content:center;position:relative;}
     .play-btn{width:50px;height:50px;background:rgba(244,124,32,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
@@ -228,20 +240,20 @@
     #why{background:var(--deep);}
     .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
     .why-list{display:flex;flex-direction:column;gap:20px;}
-    .why-item{display:flex;gap:18px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:6px;transition:all 0.3s;}
+    .why-item{display:flex;gap:18px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:6px;transition:border-color 0.3s;}
     .why-item:hover{border-color:var(--orange);}
     .why-num{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:900;color:rgba(244,124,32,0.2);line-height:1;flex-shrink:0;width:40px;}
     .why-text h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:6px;}
     .why-text p{font-size:0.83rem;color:var(--muted);line-height:1.6;}
     .why-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-    .wv-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:24px;text-align:center;transition:all 0.3s;}
+    .wv-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:24px;text-align:center;transition:border-color 0.3s;}
     .wv-card:hover{border-color:var(--orange);}
     .wv-card i{font-size:2rem;color:var(--orange);margin-bottom:12px;display:block;}
     .wv-card h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;margin-bottom:6px;}
     .wv-card p{font-size:0.78rem;color:var(--muted);line-height:1.5;}
     .industries-section{margin-top:56px;}
     .industries-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:24px;}
-    .ind-card{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:16px 12px;text-align:center;transition:all 0.3s;}
+    .ind-card{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:16px 12px;text-align:center;transition:border-color 0.3s,background 0.3s;}
     .ind-card:hover{border-color:var(--orange);background:rgba(244,124,32,0.05);}
     .ind-card i{font-size:1.5rem;color:var(--orange);margin-bottom:8px;display:block;}
     .ind-card span{font-family:'Barlow Condensed',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.5px;}
@@ -286,7 +298,7 @@
     .footer-brand .logo{margin-bottom:16px;}
     .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:20px;}
     .social-links{display:flex;gap:10px;}
-    .social-links a{width:36px;height:36px;background:var(--card);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all 0.25s;text-decoration:none;}
+    .social-links a{width:36px;height:36px;background:var(--card);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:background 0.25s,border-color 0.25s,color 0.25s;text-decoration:none;}
     .social-links a:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
     .footer-col h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:18px;}
     .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
@@ -350,7 +362,7 @@
     .menu-close{position:absolute;top:24px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;}
 
     /* page sections visibility */
-    .page-section{display:none;}
+    .page-section{display:none;contain:layout style;}
     .page-section.active{display:block;}
     #home.page-section{display:flex;}
     #home.page-section:not(.active){display:none;}
@@ -358,6 +370,10 @@
     /* Animations */
     .fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease;}
     .fade-in.visible{opacity:1;transform:translateY(0);}
+
+    /* GPU-compositing hints for animated elements */
+    .hero-feature-card,.product-card,.service-card,.why-item,.wv-card,.ind-card,.video-card{will-change:transform;}
+    .nav-cta,.btn-primary,.btn-outline,.form-submit,.btn-im{will-change:transform;}
   </style>
 </head>
 <body>
@@ -464,10 +480,10 @@
         <p class="section-subtitle">Quality compressors for every industrial need. From single piston to heavy-duty diesel-powered units.</p>
       </div>
       <div class="products-grid">
-        <div class="product-card"><div class="product-img"><img src="images/compressor1.jpg" alt="Reciprocating Compressor" style="width:100%;height:100%;object-fit:cover;" /><span class="badge">Top Seller</span></div><div class="product-body"><h3>Industrial Reciprocating Compressor</h3><p>Heavy-duty reciprocating compressors built for demanding industrial environments with high efficiency.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
-        <div class="product-card"><div class="product-img"><img src="images/screwcompressor.jpeg" alt="Screw Compressor" style="width:100%;height:100%;object-fit:cover;"/><span class="badge">Premium</span></div><div class="product-body"><h3> Screw Compressors</h3><p>Energy-efficient  screw compressors for continuous industrial operations requiring consistent air supply.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
-        <div class="product-card"><div class="product-img"><img src="images/magnum-compressor1.jpg" alt="Magnum Compressor" style="width:100%;height:100%;object-fit:cover;"/></div><div class="product-body"><h3>MAGNUM Compressor Supply</h3><p>Authorised supplier of MAGNUM COMPRESSORS'S brand compressors with full after-sales support and AMC services.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
-        <div class="product-card"><div class="product-img"><img src="images/diesel-compressor.jpg" alt="Diesel Compressor" style="width:100%;height:100%;object-fit:cover;"/><span class="badge">Portable</span></div><div class="product-body"><h3>Diesel Powered Compressor</h3><p>Robust diesel compressors ideal for remote sites and outdoor projects without electricity access.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/compressor1.jpg" alt="Reciprocating Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">Top Seller</span></div><div class="product-body"><h3>Industrial Reciprocating Compressor</h3><p>Heavy-duty reciprocating compressors built for demanding industrial environments with high efficiency.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/screwcompressor.jpeg" alt="Screw Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">Premium</span></div><div class="product-body"><h3> Screw Compressors</h3><p>Energy-efficient  screw compressors for continuous industrial operations requiring consistent air supply.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/magnum-compressor1.jpg" alt="Magnum Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"></div><div class="product-body"><h3>MAGNUM Compressor Supply</h3><p>Authorised supplier of MAGNUM COMPRESSORS'S brand compressors with full after-sales support and AMC services.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/diesel-compressor.jpg" alt="Diesel Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">Portable</span></div><div class="product-body"><h3>Diesel Powered Compressor</h3><p>Robust diesel compressors ideal for remote sites and outdoor projects without electricity access.</p><a class="product-link" href="#" onclick="showPage('products')">View Details <i class="fas fa-arrow-right"></i></a></div></div>
       </div>
       <div style="text-align:center;margin-top:36px;"><a href="#" class="btn-primary" onclick="showPage('products')">View All Products <i class="fas fa-arrow-right"></i></a></div>
     </div>
@@ -539,7 +555,7 @@
         <div class="about-visual">
           <div class="about-img-box">
             <div class="about-img-overlay"></div>
-            <img src="images/workshop.jpg" alt="SEW Workshop" style="width:100%;height:100%;object-fit:cover;" />
+            <img src="images/workshop.jpg" alt="SEW Workshop" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async">
           </div>
           <div class="about-info-strip">
             <div class="ais-item"><div class="num">15+</div><div class="label">Years Exp</div></div>
@@ -599,13 +615,13 @@
       <!-- Category 1: Compressors -->
       <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;color:var(--orange);letter-spacing:1px;margin-bottom:20px;border-bottom:2px solid var(--border);padding-bottom:10px;"><i class="fas fa-compress-arrows-alt" style="margin-right:10px;"></i>Air Compressors</h3>
       <div class="products-grid" style="margin-bottom:40px;">
-        <div class="product-card"><div class="product-img"><img src="images/compressor1.jpg" alt="Reciprocating Compressor" style="width:100%;height:100%;object-fit:cover;"/><span class="badge">Top Seller</span></div><div class="product-body"><h3>Industrial Reciprocating Compressor</h3><p>High-efficiency reciprocating compressors for demanding industrial applications with long operational life.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
-        <div class="product-card"><div class="product-img"><img src="images/screwcompressor.jpeg" alt="Screw Compressor" style="width:100%;height:100%;object-fit:cover;"/><span class="badge">Premium</span></div><div class="product-body"><h3> Screw Compressors</h3><p>Premium  brand screw compressors offering energy efficiency and continuous duty cycle performance.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/compressor1.jpg" alt="Reciprocating Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">Top Seller</span></div><div class="product-body"><h3>Industrial Reciprocating Compressor</h3><p>High-efficiency reciprocating compressors for demanding industrial applications with long operational life.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/screwcompressor.jpeg" alt="Screw Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">Premium</span></div><div class="product-body"><h3> Screw Compressors</h3><p>Premium  brand screw compressors offering energy efficiency and continuous duty cycle performance.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
        <div class="product-card">
   <div class="product-img">
     <img src="images/magnum-compressor.jpg" 
          alt="Magnum Compressor" 
-         style="width:100%;height:100%;object-fit:cover;" />
+         style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async">
     <span class="badge">MAGNUM COMPRESSORS</span>
   </div>
   <div class="product-body">
@@ -616,9 +632,9 @@
     </a>
   </div>
 </div>
-        <div class="product-card"><div class="product-img"><img src="images/single-piston.jpg" alt="Single Piston Compressor" style="width:100%;height:100%;object-fit:cover;"/></div><div class="product-body"><h3>Single Piston Compressor</h3><p>Compact, affordable single piston compressors ideal for small workshops, garages, and light industrial use.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
-        <div class="product-card"><div class="product-img"><img src="images/diesel-compressor.jpg" alt="Diesel Compressor" style="width:100%;height:100%;object-fit:cover;"/><span class="badge">Portable</span></div><div class="product-body"><h3>Diesel Powered Compressor</h3><p>Heavy-duty diesel compressors for remote and off-grid sites. Self-contained with no external power needed.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
-        <div class="product-card"><div class="product-img"><img src="images/services.jpg" alt="Compressor AMC Service" style="width:100%;height:100%;object-fit:cover;"/><span class="badge">AMC</span></div><div class="product-body"><h3>Compressor AMC &amp; Service</h3><p>Annual Maintenance Contracts for all compressor brands ensuring maximum uptime and optimal performance.</p><a class="product-link" href="#" onclick="showPage('contact')">Get AMC Quote <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/single-piston.jpg" alt="Single Piston Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"></div><div class="product-body"><h3>Single Piston Compressor</h3><p>Compact, affordable single piston compressors ideal for small workshops, garages, and light industrial use.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/diesel-compressor.jpg" alt="Diesel Compressor" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">Portable</span></div><div class="product-body"><h3>Diesel Powered Compressor</h3><p>Heavy-duty diesel compressors for remote and off-grid sites. Self-contained with no external power needed.</p><a class="product-link" href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank">Buy on IndiaMart <i class="fas fa-external-link-alt"></i></a></div></div>
+        <div class="product-card"><div class="product-img"><img src="images/services.jpg" alt="Compressor AMC Service" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"><span class="badge">AMC</span></div><div class="product-body"><h3>Compressor AMC &amp; Service</h3><p>Annual Maintenance Contracts for all compressor brands ensuring maximum uptime and optimal performance.</p><a class="product-link" href="#" onclick="showPage('contact')">Get AMC Quote <i class="fas fa-arrow-right"></i></a></div></div>
       </div>
 
       <!-- Category 2: Piping & Accessories -->
@@ -663,7 +679,7 @@
       <div class="services-grid">
         <div class="service-card">
   <div class="service-img">
-    <img src="images/transformer.jpg" alt="Transformer Installation">
+    <img src="images/transformer.jpg" alt="Transformer Installation" loading="lazy" decoding="async">
   </div>
 
   <h3>Transformer Installation</h3>
@@ -671,7 +687,7 @@
 </div>
         <div class="service-card">
   <div class="service-img">
-    <img src="images/compressor-piping.jpg" alt="Compressor Piping">
+    <img src="images/compressor-piping.jpg" alt="Compressor Piping" loading="lazy" decoding="async">
   </div>
 
   <h3>Compressor Piping</h3>
@@ -679,7 +695,7 @@
 </div>
         <div class="service-card">
   <div class="service-img">
-    <img src="images/earthing-installation.jpg" alt="Earthing Installation">
+    <img src="images/earthing-installation.jpg" alt="Earthing Installation" loading="lazy" decoding="async">
   </div>
 
   <h3>Earthing Installation</h3>
@@ -687,7 +703,7 @@
 </div>
         <div class="service-card">
   <div class="service-img">
-    <img src="images/lightning-protection.jpg" alt="Lightning Protection System">
+    <img src="images/lightning-protection.jpg" alt="Lightning Protection System" loading="lazy" decoding="async">
   </div>
 
   <h3>Lightning Protection System</h3>
@@ -695,7 +711,7 @@
 </div>
         <div class="service-card">
   <div class="service-img">
-    <img src="images/motor-rewinding.jpg" alt="Motor Rewinding Services">
+    <img src="images/motor-rewinding.jpg" alt="Motor Rewinding Services" loading="lazy" decoding="async">
   </div>
 
   <h3>Motor Rewinding Services</h3>
@@ -703,7 +719,7 @@
 </div>
         <div class="service-card">
   <div class="service-img">
-    <img src="images/air-dryer-service.jpg" alt="Air Dryer Repair & Services">
+    <img src="images/air-dryer-service.jpg" alt="Air Dryer Repair & Services" loading="lazy" decoding="async">
   </div>
 
   <h3>Air Dryer Repair & Services</h3>
@@ -711,7 +727,7 @@
 </div>
         <div class="service-card">
   <div class="service-img">
-    <img src="images/vfd-installation.jpg" alt="VFD Installation">
+    <img src="images/vfd-installation.jpg" alt="VFD Installation" loading="lazy" decoding="async">
   </div>
 
   <h3>VFD Installation</h3>
@@ -719,7 +735,7 @@
 </div>
 <div class="service-card">
   <div class="service-img">
-    <img src="images/compressor-service.jpg" alt="Multi-Brand Compressor Service">
+    <img src="images/compressor-service.jpg" alt="Multi-Brand Compressor Service" loading="lazy" decoding="async">
   </div>
 
   <h3>Multi-Brand Compressor Service</h3>
@@ -727,7 +743,7 @@
 </div>
 <div class="service-card">
   <div class="service-img">
-    <img src="images/government-contracts.jpg" alt="Government MSDCL Contracts">
+    <img src="images/government-contracts.jpg" alt="Government MSDCL Contracts" loading="lazy" decoding="async">
   </div>
 
   <h3>Government / MSDCL Contracts</h3>
@@ -735,7 +751,7 @@
 </div>
 <div class="service-card">
   <div class="service-img">
-    <img src="images/rental-services.jpg" alt="Rental Services">
+    <img src="images/rental-services.jpg" alt="Rental Services" loading="lazy" decoding="async">
   </div>
 
   <h3>Rental Services</h3>
@@ -743,7 +759,7 @@
 </div>
 <div class="service-card">
   <div class="service-img">
-    <img src="images/airend-repair.jpg" alt="Airend Repairing Services">
+    <img src="images/airend-repair.jpg" alt="Airend Repairing Services" loading="lazy" decoding="async">
   </div>
 
   <h3>Airend Repairing Services</h3>
@@ -751,7 +767,7 @@
 </div>
 <div class="service-card">
   <div class="service-img">
-    <img src="images/solar-installation.jpg" alt="Solar Installation Services">
+    <img src="images/solar-installation.jpg" alt="Solar Installation Services" loading="lazy" decoding="async">
   </div>
 
   <h3>Solar Installation Services</h3>
@@ -764,21 +780,18 @@
 <!-- ══════════════ PAGE: CONTACT ══════════════ -->
 <div id="page-contact" class="page-section">
   <div style="padding-top:66px;"></div>
-  <section id="contact" style="padding-top:60px;">
-    <div id="page-contact" class="page-section">
-  <div style="padding-top:66px;"></div>
   <section id="contact" style="padding-top:60px;position:relative;">
   <div class="contact-page-bg"></div>
   <div style="position:absolute;inset:0;background:rgba(10,21,32,0.88);z-index:1;"></div>
+  <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 5%;">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Reach out for product enquiries, service requests, quotations, or general information. We're happy to help.</p>
-      </div>
       <div class="contact-grid">
         <div class="contact-info-block">
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Jalgaon Office (HQ)</h4><p>Pl. no. 17, Veer Savarkar Nagar, behind Talati office, Nisarg Colony, Pimprala, Jalgaon, Maharashtra 425001</p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-city"></i></div><div><h4>Pune Office</h4><p>Atlas Millennium, A 601, Tathavade, PCMC, Pune, Maharashtra 411033</p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone Numbers</h4><p><a href="tel:+919284358304">+91 9284358304</a><br><a href="tel:+919158406806">+91 9158406806</a><br><a href="tel:+917972465550">+91 7972465550</a><br><a href="tel:+919821297745">+91 9821297745</a></p></div></div>
-          <div class="ci-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:Sushilaengineeringw@gmail.com">Sushilaengineeringw@gmail.com</a></p></div></div>
+          <div class="ci-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="/cdn-cgi/l/email-protection#481b3d3b202124292d262f21262d2d3a21262f3f082f25292124662b2725"><span class="__cf_email__" data-cfemail="d784a2a4bfbebbb6b2b9b0beb9b2b2a5beb9b0a097b0bab6bebbf9b4b8ba">[email&#160;protected]</span></a></p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><h4>Business Hours</h4><p>Monday – Saturday: 10:00 AM – 6:00 PM<br><span style="color:#f44336;">Sunday: Closed</span></p></div></div>
           <div class="ci-card"><div class="ci-icon"><i class="fab fa-whatsapp" style="color:#25d366;font-size:1.1rem;"></i></div><div><h4>WhatsApp</h4><p><a href="https://wa.me/919284358304" target="_blank">Chat with us on WhatsApp →</a></p></div></div>
           <div class="indiamart-strip" style="margin-top:0;">
@@ -831,8 +844,6 @@
     </div>
   </section>
 </div>
-
-<!-- ══════════════ FOOTER ══════════════ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -844,7 +855,7 @@
         <p>Industrial Service Partner &amp; Trusted Compressor Supplier. Serving Maharashtra with precision, reliability, and decades of expertise.</p>
         <div class="social-links">
           <a href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank" title="IndiaMart"><i class="fas fa-store"></i></a>
-          <a href="mailto:Sushilaengineeringw@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="/cdn-cgi/l/email-protection#fcaf898f9495909d99929b959299998e95929b8bbc9b919d9590d29f9391" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://wa.me/919284358304" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           <a href="tel:+919284358304" title="Call"><i class="fas fa-phone"></i></a>
         </div>
@@ -877,7 +888,7 @@
         <div class="footer-contact-item"><i class="fas fa-city"></i><span>Tathavade, PCMC, Pune 411033</span></div>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919284358304">+91 9284358304</a></span></div>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919158406806">+91 9158406806</a></span></div>
-        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:Sushilaengineeringw@gmail.com">Sushilaengineeringw@gmail.com</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="/cdn-cgi/l/email-protection#075472746f6e6b666269606e696262756e69607047606a666e6b2964686a"><span class="__cf_email__" data-cfemail="a3f0d6d0cbcacfc2c6cdc4cacdc6c6d1cacdc4d4e3c4cec2cacf8dc0ccce">[email&#160;protected]</span></a></span></div>
         <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon–Sat: 10AM – 6PM</span></div>
       </div>
     </div>
@@ -900,11 +911,13 @@
   </a>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // ── PAGE NAVIGATION ──
+  const _pages = document.querySelectorAll('.page-section');
+  const _navLinks = document.querySelectorAll('.nav-links a');
   function showPage(page) {
-    document.querySelectorAll('.page-section').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    _pages.forEach(p => p.classList.remove('active'));
+    _navLinks.forEach(a => a.classList.remove('active'));
     document.getElementById('page-' + page).classList.add('active');
     const navEl = document.getElementById('nav-' + page);
     if (navEl) navEl.classList.add('active');
@@ -940,24 +953,25 @@
   const encodedText = encodeURIComponent(text);
   window.open(`https://wa.me/919284358304?text=${encodedText}`, '_blank');
 }
-  // ── VIDEO CLICK ──
-  document.querySelectorAll('.video-card').forEach(card => {
-    card.addEventListener('click', () => {
-      window.open('https://www.indiamart.com/sushilaengineeringworkspune/', '_blank');
-    });
+  // ── VIDEO CLICK (event delegation - more efficient than per-card listeners) ──
+  document.getElementById('videos') && document.getElementById('videos').addEventListener('click', e => {
+    if (e.target.closest('.video-card')) window.open('https://www.indiamart.com/sushilaengineeringworkspune/', '_blank');
   });
 
   // ── FADE IN ON SCROLL ──
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target); // stop observing once visible (perf)
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ── NAV ACTIVE ON SCROLL (home page sections) ──
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    nav.style.boxShadow = window.scrollY > 10 ? '0 4px 30px rgba(0,0,0,0.5)' : 'none';
-  });
+  // ── EVENT DELEGATION for video-cards (replaces individual listeners) ──
+  // (already handled via click delegation below; removing old per-card listeners)
 </script>
 </body>
 </html>
