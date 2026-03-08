@@ -72,39 +72,46 @@
   inset:0;
   background:rgba(0,0,0,0.2);
   
- /* dark overlay */
+  /* dark overlay */
 }
 .about-page-bg{
-  position:absolute;
+  position:fixed;
   inset:0;
   background:url('images/back.jpg') center/cover no-repeat;
+  background-attachment:fixed;
   z-index:0;
   opacity:0.80;
+  pointer-events:none;
 }
 .products-page-bg{
-  position:absolute;
+  position:fixed;
   inset:0;
   background:url('images/products.jpg') center/cover no-repeat;
+  background-attachment:fixed;
   z-index:0;
   opacity:0.85;
   filter:brightness(1.5);
+  pointer-events:none;
 }
 .services-page-bg{
-  position:absolute;
+  position:fixed;
   inset:0;
   background:url('images/services.jpg') center/cover no-repeat;
+  background-attachment:fixed;
   z-index:0;
   opacity:0.90;
-  filter: brightness(1.5);
+  filter:brightness(1.5);
+  pointer-events:none;
 }
 .contact-page-bg{
-  position:absolute;
+  position:fixed;
   inset:0;
   background:url('images/contact.jpg') center/cover no-repeat;
+  background-attachment:fixed;
   z-index:0;
   opacity:0.60;
+  pointer-events:none;
 }
-
     .hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(244,124,32,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(244,124,32,0.8) 1px,transparent 1px);background-size:60px 60px;}
     .hero-glow{position:absolute;top:-100px;right:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(26,110,160,0.25) 0%,transparent 70%);pointer-events:none;}
     .hero-glow2{position:absolute;bottom:-50px;left:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(244,124,32,0.12) 0%,transparent 70%);pointer-events:none;}
@@ -536,7 +543,7 @@
   <div style="padding-top:66px;"></div>
   <section id="about" style="padding-top:60px;position:relative;">
   <div class="about-page-bg"></div>
-  <div style="position:absolute;inset:0;background:rgba(10,21,32,0.65);z-index:1;"></div>
+  <div style="position:fixed;inset:0;background:rgba(10,21,32,0.65);z-index:1;pointer-events:none;"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
       <div class="section-header">
         <div class="section-tag">About Us</div>
@@ -607,7 +614,7 @@
   <div style="padding-top:66px;"></div>
   <section id="products" style="padding-top:60px;position:relative;">
   <div class="products-page-bg"></div>
-  <div style="position:absolute;inset:0;background:rgba(10,21,32,0.88);z-index:1;"></div>
+  <div style="position:fixed;inset:0;background:rgba(10,21,32,0.65);z-index:1;pointer-events:none;"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
       <div class="section-header">
         <div class="section-tag">Product Catalogue</div>
@@ -677,7 +684,7 @@
   <div style="padding-top:66px;"></div>
   <section id="services" style="padding-top:60px;position:relative;">
   <div class="services-page-bg"></div>
-  <div style="position:absolute;inset:0;background:rgba(10,21,32,0.88);z-index:1;"></div>
+  <div style="position:fixed;inset:0;background:rgba(10,21,32,0.65);z-index:1;pointer-events:none;"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
       <div class="section-header">
         <div class="section-tag">Industrial Services</div>
@@ -829,7 +836,7 @@
   <div style="padding-top:66px;"></div>
   <section id="contact" style="padding-top:60px;position:relative;">
   <div class="contact-page-bg"></div>
-  <div style="position:absolute;inset:0;background:rgba(10,21,32,0.88);z-index:1;"></div>
+  <div style="position:fixed;inset:0;background:rgba(10,21,32,0.70);z-index:1;pointer-events:none;"></div>
   <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 5%;">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Reach out for product enquiries, service requests, quotations, or general information. We're happy to help.</p>
