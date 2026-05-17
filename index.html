@@ -21,9 +21,9 @@
     </body>
 </html>
   <!-- ═ SEO META TAGS ═ -->
-  <title>Air Compressor Dealer &amp; Service in Jalgaon, Pune & Maharashtra | Sushila Engineering Works</title>
-  <meta name="description" content="Sushila Engineering Works – Authorised air compressor dealer, AMC &amp; multi-brand compressor service in Jalgaon, Nashik, Dhule &amp; Pune. MSEDCL certified electrical contractor. Call +91 9284358304.">
-  <meta name="keywords" content="air compressor dealer Jalgaon & Pune, compressor service Jalgaon & Pune, compressor AMC Maharashtra, Atlas Copco service Jalgaon & Pune, ELGi compressor dealer Jalgaon & Pune, Ingersoll Rand service Jalgaon & Pune, MSEDCL contractor Jalgaon & Pune, compressor piping Jalgaon & Pune, screw compressor Maharashtra, reciprocating compressor Jalgaon & Pune, industrial earthing Jalgaon & Pune, VFD installation Jalgaon & Pune, solar installation Jalgaon & Pune, Magnum compressor dealer, Sushila Engineering Works">
+  <title>Air Compressor Dealer, Solar Installation & Service in Jalgaon, Pune | Sushila Engineering Works</title>
+  <meta name="description" content="Sushila Engineering Works – Authorised air compressor dealer, AMC, multi-brand compressor service & PM Surya Ghar rooftop solar vendor in Jalgaon, Nashik, Dhule & Pune. MSEDCL certified. ₹78,000 subsidy assistance. Call +91 9284358304.">
+  <meta name="keywords" content="air compressor dealer Jalgaon Pune, compressor service Maharashtra, compressor AMC Maharashtra, Atlas Copco service Jalgaon Pune, ELGi compressor dealer Maharashtra, MSEDCL contractor Jalgaon Pune, compressor piping Maharashtra, screw compressor Maharashtra, PM Surya Ghar solar Jalgaon, rooftop solar installation Jalgaon Pune, Waaree solar dealer Jalgaon, Adani solar installation Maharashtra, solar subsidy Maharashtra, solar vendor Jalgaon, Magnum compressor dealer, Sushila Engineering Works, GSTIN 27BNSPT7176A1ZF">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Sushila Engineering Works">
   <link rel="canonical" href="https://sushilaengineeringworks.in/">
@@ -55,6 +55,9 @@
       --orange: #f47c20;
       --orange2: #e06010;
       --blue: #1a6ea0;
+      --solar: #f5a623;
+      --solar2: #e8920e;
+      --solargreen: #27ae60;
       --light: #e8edf2;
       --muted: #8aa0b0;
       --card: #12263a;
@@ -64,7 +67,59 @@
     html{scroll-behavior:smooth;}
     body{font-family:'Barlow',sans-serif;background:var(--steel);color:var(--light);overflow-x:hidden;}
 
-    /* ── SCROLLBAR ── */
+    /* ── SOLAR STICKY BADGE ── */
+    .solar-sticky{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:999;display:flex;flex-direction:column;align-items:flex-end;}
+    .solar-tab{background:linear-gradient(135deg,#f5a623,#e06010);color:#fff;writing-mode:vertical-rl;text-orientation:mixed;padding:18px 10px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-radius:6px 0 0 6px;box-shadow:-4px 0 20px rgba(245,166,35,0.4);transition:all 0.3s;text-decoration:none;line-height:1.2;}
+    .solar-tab:hover{padding-right:14px;background:linear-gradient(135deg,#e8920e,#c84f00);}
+    .solar-tab i{font-size:1rem;margin-bottom:8px;writing-mode:horizontal-tb;}
+
+    /* ── DIVISION SHOWCASE ── */
+    .division-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+    .division-card{padding:40px 36px;position:relative;overflow:hidden;}
+    .division-card.compressor{background:linear-gradient(135deg,var(--card),#0e2035);border-right:1px solid var(--border);}
+    .division-card.solar{background:linear-gradient(135deg,#0e2a1a,#0d1b2a);}
+    .division-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;opacity:0.08;}
+    .division-card.compressor::before{background:var(--orange);}
+    .division-card.solar::before{background:var(--solar);}
+    .div-icon{width:60px;height:60px;border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+    .div-icon.orange{background:linear-gradient(135deg,var(--orange),var(--orange2));}
+    .div-icon.yellow{background:linear-gradient(135deg,var(--solar),#d4820a);}
+    .div-icon i{color:#fff;font-size:26px;}
+    .div-label{font-size:0.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
+    .div-label.orange{color:var(--orange);}
+    .div-label.yellow{color:var(--solar);}
+    .div-title{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;line-height:1.1;margin-bottom:14px;}
+    .div-desc{color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:20px;}
+    .div-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+    .div-pill{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:5px 14px;border-radius:20px;font-size:0.78rem;font-weight:600;color:var(--light);}
+    .div-pill.orange{border-color:rgba(244,124,32,0.4);color:var(--orange);}
+    .div-pill.yellow{border-color:rgba(245,166,35,0.4);color:var(--solar);}
+    .solar-subsidy-badge{background:rgba(39,174,96,0.15);border:1px solid rgba(39,174,96,0.4);border-radius:6px;padding:12px 16px;display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+    .solar-subsidy-badge i{color:#27ae60;font-size:1.2rem;}
+    .solar-subsidy-badge span{font-size:0.88rem;font-weight:600;color:#27ae60;}
+
+    /* ── SOLAR PAGE ── */
+    .solar-hero-section{padding:80px 5%;background:linear-gradient(135deg,#0a1a0d,#0d1b2a);position:relative;overflow:hidden;}
+    .solar-hero-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 50%,rgba(245,166,35,0.08) 0%,transparent 60%);}
+    .solar-features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;}
+    .solar-feature-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden;}
+    .solar-feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--solar),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+    .solar-feature-card:hover::before{transform:scaleX(1);}
+    .solar-feature-card:hover{border-color:var(--solar);transform:translateY(-3px);}
+    .sfc-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--solar),#d4820a);border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+    .sfc-icon i{color:#fff;font-size:20px;}
+    .sfc-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:8px;}
+    .sfc-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;}
+    .solar-stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border-radius:6px;overflow:hidden;margin-top:40px;}
+    .ss-box{background:var(--card);padding:22px;text-align:center;}
+    .ss-num{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;color:var(--solar);}
+    .ss-label{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
+    .solar-brands{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
+    .brand-badge{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:1px;display:flex;align-items:center;gap:8px;}
+    .brand-badge i{color:var(--solar);}
+    .solar-scheme-box{background:linear-gradient(135deg,rgba(39,174,96,0.1),rgba(39,174,96,0.05));border:1px solid rgba(39,174,96,0.3);border-radius:8px;padding:30px;margin-top:40px;}
+    .solar-scheme-box h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;color:#27ae60;margin-bottom:14px;}
+    .solar-scheme-box p{color:var(--muted);font-size:0.88rem;line-height:1.7;}
     ::-webkit-scrollbar{width:6px;}
     ::-webkit-scrollbar-track{background:var(--deep);}
     ::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px;}
@@ -332,7 +387,7 @@
     /* ── FOOTER ── */
     footer{background:var(--deep);border-top:2px solid var(--orange);padding:60px 5% 30px;}
     .footer-inner{max-width:1200px;margin:0 auto;}
-    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:24px;margin-bottom:48px;}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr 1fr;gap:24px;margin-bottom:48px;}
     .footer-brand .logo{margin-bottom:16px;}
     .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:20px;}
     .social-links{display:flex;gap:10px;}
@@ -549,6 +604,7 @@
       <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
       <li><a href="#" onclick="showPage('products')" id="nav-products">Products</a></li>
       <li><a href="#" onclick="showPage('services')" id="nav-services">Services</a></li>
+      <li><a href="#" onclick="showPage('solar')" id="nav-solar" style="color:var(--solar);"><i class="fas fa-sun" style="margin-right:4px;"></i>Solar</a></li>
       <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
     </ul>
     <a class="nav-cta" href="tel:+919284358304"><i class="fas fa-phone"></i> Call Now</a>
@@ -563,6 +619,7 @@
   <a href="#" onclick="showPage('about');toggleMenu()">About</a>
   <a href="#" onclick="showPage('products');toggleMenu()">Products</a>
   <a href="#" onclick="showPage('services');toggleMenu()">Services</a>
+  <a href="#" onclick="showPage('solar');toggleMenu()" style="color:var(--solar);"><i class="fas fa-sun"></i> Solar Energy</a>
   <a href="#" onclick="showPage('contact');toggleMenu()">Contact</a>
 </div>
 
@@ -609,6 +666,7 @@
           <div class="hero-feature-card"><div class="hfc-icon"><i class="fas fa-wind"></i></div><div><div class="hfc-title">Compressor Piping Services</div><div class="hfc-sub">GI, Aluminium, MS, SS &amp; PEX</div></div></div>
           <div class="hero-feature-card"><div class="hfc-icon"><i class="fas fa-bolt"></i></div><div><div class="hfc-title">GOVERMENT ELECTRICAL CONTRACT'S</div><div class="hfc-sub">MSEDCL Certified Partner</div></div></div>
           <div class="hero-feature-card"><div class="hfc-icon"><i class="fas fa-tools"></i></div><div><div class="hfc-title">Compressor AMC &amp; Multi-Brand Compressor's Servicing</div><div class="hfc-sub">All Compressor Brands</div></div></div>
+          <div class="hero-feature-card" style="border-color:rgba(245,166,35,0.4);"><div class="hfc-icon" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-sun"></i></div><div><div class="hfc-title" style="color:var(--solar);">PM Surya Ghar Rooftop Solar</div><div class="hfc-sub">Waaree &amp; Adani · ₹78,000 Subsidy for 3kW</div></div></div>
         </div>
       </div>
     </div>
@@ -622,8 +680,53 @@
       <div class="trust-item"><i class="fas fa-tools"></i><span>Multi-Brand Service</span></div>
       <div class="trust-item"><i class="fas fa-clock"></i><span>15+ Years Experience</span></div>
       <div class="trust-item"><i class="fas fa-map-marker-alt"></i><span>Pan Maharashtra</span></div>
+      <div class="trust-item" style="color:var(--solar);"><i class="fas fa-sun"></i><span>PM Surya Ghar Partner</span></div>
+      <div class="trust-item" style="color:var(--solar);"><i class="fas fa-rupee-sign"></i><span>₹78,000 Subsidy Assistance</span></div>
     </div>
   </div>
+
+  <!-- DUAL DIVISION SHOWCASE -->
+  <section style="padding:70px 5%;background:var(--steel);">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:40px;">
+        <div class="section-tag" style="justify-content:center;">Two Divisions · One Trusted Name</div>
+        <h2 class="section-title" style="text-align:center;">Industrial Engineering &amp; Solar Energy</h2>
+        <p class="section-subtitle" style="text-align:center;margin:0 auto;">Sushila Engineering Works now serves you across two high-impact divisions — powering your machines and your rooftops.</p>
+      </div>
+      <div class="division-grid">
+        <div class="division-card compressor">
+          <div class="div-icon orange"><i class="fas fa-compress-arrows-alt"></i></div>
+          <div class="div-label orange">Industrial Division</div>
+          <div class="div-title">Air Compressor &amp;<br>Filtration Services</div>
+          <div class="div-desc">Authorised dealer and multi-brand service partner for all major compressor OEMs across Jalgaon, Nashik, Dhule and Pune. MSEDCL certified electrical contractor.</div>
+          <div class="div-pills">
+            <span class="div-pill orange">Compressor AMC</span>
+            <span class="div-pill orange">Piping Works</span>
+            <span class="div-pill orange">MSEDCL Contracts</span>
+            <span class="div-pill">VFD Installation</span>
+            <span class="div-pill">Earthing</span>
+            <span class="div-pill">Motor Rewinding</span>
+          </div>
+          <a href="#" class="btn-primary" onclick="showPage('products')" style="font-size:0.88rem;padding:12px 24px;"><i class="fas fa-box-open"></i> View Products</a>
+        </div>
+        <div class="division-card solar">
+          <div class="div-icon yellow"><i class="fas fa-sun"></i></div>
+          <div class="div-label yellow">Solar Division</div>
+          <div class="div-title">Authorized PM Surya Ghar<br>Rooftop Solar Vendor</div>
+          <div class="div-desc">Authorized installer under the PM Surya Ghar Muft Bijli Yojana. Waaree &amp; Adani Solar branded systems with full subsidy assistance, net metering support, and free site survey.</div>
+          <div class="solar-subsidy-badge"><i class="fas fa-rupee-sign"></i><span>₹78,000 Government Subsidy for 3kW System</span></div>
+          <div class="div-pills">
+            <span class="div-pill yellow">Free Site Survey</span>
+            <span class="div-pill yellow">Subsidy Assistance</span>
+            <span class="div-pill yellow">Net Metering</span>
+            <span class="div-pill">Waaree Solar</span>
+            <span class="div-pill">Adani Solar</span>
+          </div>
+          <a href="#" class="btn-primary" onclick="showPage('solar')" style="background:linear-gradient(135deg,var(--solar),#d4820a);font-size:0.88rem;padding:12px 24px;"><i class="fas fa-sun"></i> Solar Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- QUICK PRODUCTS -->
   <section style="padding:70px 5%;background:var(--deep);">
@@ -657,6 +760,7 @@
         <div class="service-card"><div class="sc-icon"><i class="fas fa-shield-alt"></i></div><h3>Industrial Earthing Services</h3><p>Professional grounding system setup ensuring electrical safety and preventing potential hazards.</p></div>
         <div class="service-card"><div class="sc-icon"><i class="fas fa-tools"></i></div><h3>Compressor AMC &amp; Service</h3><p>Annual maintenance contracts for all major compressor brands ensuring minimal downtime.</p></div>
         <div class="service-card"><div class="sc-icon"><i class="fas fa-cloud-sun"></i></div><h3>Solar Installation</h3><p>Professional solar panel installation for industrial and commercial establishments reducing energy costs.</p></div>
+        <div class="service-card" style="border-color:rgba(245,166,35,0.4);"><div class="sc-icon" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-sun"></i></div><h3 style="color:var(--solar);">PM Surya Ghar Rooftop Solar</h3><p>Authorized installer for residential &amp; commercial rooftop solar. ₹78,000 subsidy for 3kW. Free site survey. Net metering support. Waaree &amp; Adani systems.</p></div>
         <div class="service-card"><div class="sc-icon"><i class="fas fa-network-wired"></i></div><h3>VFD Installation</h3><p>Variable Frequency Drive installation to regulate motor speed, enhancing energy efficiency and process control.</p></div>
       </div>
       <div style="text-align:center;margin-top:36px;"><a href="#" class="btn-primary" onclick="showPage('services')">All Services <i class="fas fa-arrow-right"></i></a></div>
@@ -1066,6 +1170,8 @@
                 <option>VFD Installation</option>
                 <option>Motor Rewinding</option>
                 <option>Solar Installation</option>
+                <option>PM Surya Ghar Solar – Free Site Survey</option>
+                <option>Solar AMC / Service</option>
                 <option>Rental Services</option>
                 <option>Other</option>
               </select>
@@ -1082,6 +1188,79 @@
     </div>
   </section>
 </div>
+<!-- ══════════════ PAGE: SOLAR ══════════════ -->
+<div id="page-solar" class="page-section">
+  <div style="padding-top:66px;"></div>
+  <section class="solar-hero-section">
+    <div class="section-inner" style="position:relative;z-index:2;">
+      <div class="section-header">
+        <div class="section-tag" style="color:var(--solar);"><i class="fas fa-sun" style="margin-right:6px;"></i>Solar Energy Division</div>
+        <h2 class="section-title">PM Surya Ghar Rooftop Solar — <span style="color:var(--solar);">Jalgaon &amp; Pune</span></h2>
+        <p class="section-subtitle">Authorized vendor under PM Surya Ghar Muft Bijli Yojana. Waaree &amp; Adani Solar systems. ₹78,000 subsidy for 3kW. Free site survey. Net metering support.</p>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="tel:+919284358304" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-phone"></i> Free Site Survey — Call Now</a>
+          <a href="https://wa.me/919284358304?text=I%20want%20to%20enquire%20about%20PM%20Surya%20Ghar%20Solar%20Installation" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</a>
+        </div>
+      </div>
+
+      <!-- Solar Stats -->
+      <div class="solar-stats-strip">
+        <div class="ss-box"><div class="ss-num">₹78K</div><div class="ss-label">Subsidy for 3kW</div></div>
+        <div class="ss-box"><div class="ss-num">25yr</div><div class="ss-label">Panel Warranty</div></div>
+        <div class="ss-box"><div class="ss-num">0₹</div><div class="ss-label">Site Survey Cost</div></div>
+        <div class="ss-box"><div class="ss-num">90%</div><div class="ss-label">Bill Reduction</div></div>
+      </div>
+
+      <!-- PM Surya Ghar Scheme Box -->
+      <div class="solar-scheme-box" style="margin-top:40px;">
+        <h3><i class="fas fa-flag" style="margin-right:10px;"></i>PM Surya Ghar Muft Bijli Yojana — Official Partner</h3>
+        <p>Under this central government scheme, eligible households receive up to <strong style="color:#27ae60;">₹78,000 direct subsidy</strong> for a 3kW rooftop solar system. As an authorized vendor, Sushila Engineering Works handles your complete application, DISCOM approval, net metering, and installation — end to end. GSTIN: <strong style="color:var(--light);">27BNSPT7176A1ZF</strong></p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;">
+          <span style="background:rgba(39,174,96,0.1);border:1px solid rgba(39,174,96,0.3);padding:6px 16px;border-radius:4px;font-size:0.82rem;color:#27ae60;font-weight:600;"><i class="fas fa-check" style="margin-right:6px;"></i>1kW: ₹30,000 Subsidy</span>
+          <span style="background:rgba(39,174,96,0.1);border:1px solid rgba(39,174,96,0.3);padding:6px 16px;border-radius:4px;font-size:0.82rem;color:#27ae60;font-weight:600;"><i class="fas fa-check" style="margin-right:6px;"></i>2kW: ₹60,000 Subsidy</span>
+          <span style="background:rgba(39,174,96,0.1);border:1px solid rgba(39,174,96,0.3);padding:6px 16px;border-radius:4px;font-size:0.82rem;color:#27ae60;font-weight:600;"><i class="fas fa-check" style="margin-right:6px;"></i>3kW: ₹78,000 Subsidy</span>
+        </div>
+      </div>
+
+      <!-- Solar Features Grid -->
+      <div style="margin-top:60px;">
+        <div class="section-tag" style="color:var(--solar);">Our Solar Services</div>
+        <h3 class="section-title" style="margin-bottom:30px;">Complete Rooftop Solar Solutions</h3>
+        <div class="solar-features-grid">
+          <div class="solar-feature-card"><div class="sfc-icon"><i class="fas fa-search-location"></i></div><div class="sfc-title">Free Site Survey</div><div class="sfc-desc">No-cost on-site assessment of your rooftop, load calculation, shadow analysis, and system sizing recommendation.</div></div>
+          <div class="solar-feature-card"><div class="sfc-icon"><i class="fas fa-file-alt"></i></div><div class="sfc-title">Subsidy Application Assistance</div><div class="sfc-desc">End-to-end documentation support for PM Surya Ghar online portal registration and DISCOM application.</div></div>
+          <div class="solar-feature-card"><div class="sfc-icon"><i class="fas fa-bolt"></i></div><div class="sfc-title">Net Metering Support</div><div class="sfc-desc">Full assistance for MSEDCL net metering agreement, bidirectional meter installation, and grid synchronisation.</div></div>
+          <div class="solar-feature-card"><div class="sfc-icon"><i class="fas fa-tools"></i></div><div class="sfc-title">Professional Installation</div><div class="sfc-desc">Certified solar panel mounting, wiring, inverter installation, and earthing by qualified MSEDCL-certified electricians.</div></div>
+          <div class="solar-feature-card"><div class="sfc-icon"><i class="fas fa-shield-alt"></i></div><div class="sfc-title">AMC &amp; Service</div><div class="sfc-desc">Annual maintenance contracts for solar systems — panel cleaning, inverter health check, output monitoring, and warranty support.</div></div>
+          <div class="solar-feature-card"><div class="sfc-icon"><i class="fas fa-building"></i></div><div class="sfc-title">Commercial &amp; Industrial Solar</div><div class="sfc-desc">Larger system design for factories, industries, and commercial buildings. Reduce electricity bills significantly.</div></div>
+        </div>
+      </div>
+
+      <!-- Brands -->
+      <div style="margin-top:50px;">
+        <div class="section-tag" style="color:var(--solar);">Solar Brands We Install</div>
+        <div class="solar-brands">
+          <div class="brand-badge"><i class="fas fa-sun"></i> Waaree Solar</div>
+          <div class="brand-badge"><i class="fas fa-sun"></i> Adani Solar</div>
+          <div class="brand-badge"><i class="fas fa-flag"></i> PM Surya Ghar Authorized</div>
+          <div class="brand-badge"><i class="fas fa-certificate"></i> MSEDCL Net Meter Certified</div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div style="margin-top:50px;background:var(--card);border:1px solid rgba(245,166,35,0.3);border-radius:8px;padding:32px;text-align:center;">
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--solar);margin-bottom:10px;"><i class="fas fa-sun" style="margin-right:8px;"></i>Get Your Free Solar Consultation Today</h3>
+        <p style="color:var(--muted);margin-bottom:20px;font-size:0.9rem;">Jalgaon &amp; Pune | GSTIN: 27BNSPT7176A1ZF | +91 9284358304</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+          <a href="tel:+919284358304" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-phone"></i> +91 9284358304</a>
+          <a href="https://wa.me/919284358304?text=I%20want%20to%20enquire%20about%20PM%20Surya%20Ghar%20Solar%20Installation" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</a>
+          <a href="#" class="btn-outline" onclick="showPage('contact')" style="border-color:rgba(245,166,35,0.4);color:var(--solar);"><i class="fas fa-envelope"></i> Send Enquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -1090,7 +1269,7 @@
           <div class="logo-icon" style="background:none;clip-path:none;width:44px;height:44px;"><img src="images/logo.jpg" alt="SEW Logo" style="width:100%;height:100%;object-fit:contain;border-radius:4px;" /></div>
           <div class="logo-text">Sushila Engineering <span>Works · Est. 2010</span></div>
         </a>
-        <p>Industrial Service Partner &amp; Trusted Compressor Supplier. Serving Maharashtra with precision, reliability, and decades of expertise.</p>
+        <p>Industrial Service Partner &amp; Authorized PM Surya Ghar Solar Vendor. Serving Maharashtra with compressors, electrical contracting, and rooftop solar since 2010.</p>
         <div class="social-links">
           <a href="https://www.indiamart.com/sushilaengineeringworkspune/" target="_blank" title="IndiaMart"><i class="fas fa-store"></i></a>
           <a href="/cdn-cgi/l/email-protection#fcaf898f9495909d99929b959299998e95929b8bbc9b919d9590d29f9391" title="Email"><i class="fas fa-envelope"></i></a>
@@ -1110,14 +1289,25 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Our Services</h4>
+        <h4>Compressor Services</h4>
         <ul class="footer-links">
           <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Compressor Piping</a></li>
           <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> MSEDCL Contracts</a></li>
           <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Earthing Services</a></li>
           <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> VFD Installation</a></li>
           <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Motor Rewinding</a></li>
-          <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Solar Installation</a></li>
+          <li><a href="#" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Compressor AMC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 style="color:var(--solar);"><i class="fas fa-sun" style="margin-right:6px;"></i>Solar Division</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showPage('solar')" style="color:var(--solar);"><i class="fas fa-chevron-right"></i> PM Surya Ghar Solar</a></li>
+          <li><a href="#" onclick="showPage('solar')"><i class="fas fa-chevron-right"></i> Rooftop Solar Installation</a></li>
+          <li><a href="#" onclick="showPage('solar')"><i class="fas fa-chevron-right"></i> Waaree &amp; Adani Systems</a></li>
+          <li><a href="#" onclick="showPage('solar')"><i class="fas fa-chevron-right"></i> ₹78,000 Subsidy Help</a></li>
+          <li><a href="#" onclick="showPage('solar')"><i class="fas fa-chevron-right"></i> Free Site Survey</a></li>
+          <li><a href="#" onclick="showPage('solar')"><i class="fas fa-chevron-right"></i> Net Metering Support</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1128,6 +1318,7 @@
         <div class="footer-contact-item"><i class="fas fa-phone"></i><span><a href="tel:+919158406806">+91 9158406806</a></span></div>
         <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="/cdn-cgi/l/email-protection#075472746f6e6b666269606e696262756e69607047606a666e6b2964686a"><span class="__cf_email__" data-cfemail="a3f0d6d0cbcacfc2c6cdc4cacdc6c6d1cacdc4d4e3c4cec2cacf8dc0ccce">[email&#160;protected]</span></a></span></div>
         <div class="footer-contact-item"><i class="fas fa-clock"></i><span itemprop="openingHours" content="Mo-Sa 08:00-19:00">Mon–Sat: Open 24/7</span></div>
+        <div class="footer-contact-item" style="margin-top:10px;"><i class="fas fa-id-card" style="color:var(--solar);"></i><span style="color:var(--muted);font-size:0.82rem;">GSTIN: 27BNSPT7176A1ZF</span></div>
       </div>
       <div class="footer-col">
         <h4>Service Locations</h4>
@@ -1150,6 +1341,11 @@
     </div>
   </div>
 </footer>
+
+<!-- STICKY SOLAR BADGE -->
+<div class="solar-sticky">
+  <a href="#" onclick="showPage('solar')" class="solar-tab"><i class="fas fa-sun"></i>Get ₹78K Solar Subsidy · Free Survey</a>
+</div>
 
 <!-- WHATSAPP FLOATING BUTTON -->
 <div class="whatsapp-float">
