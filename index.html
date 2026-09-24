@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">
-    <meta name="theme-color" content="#f47c20">
+    <meta name="theme-color" content="#060606">
   <!-- ═ SEO META TAGS ═ -->
   <title>Air Compressor Dealer, Solar Installation & Service in Jalgaon, Pune | Sushila Engineering Works</title>
   <meta name="description" content="Sushila Engineering Works – Authorised air compressor dealer, AMC, multi-brand compressor service & PM Surya Ghar rooftop solar vendor in Jalgaon, Nashik, Dhule & Pune. MSEDCL certified. ₹78,000 subsidy assistance. Call +91 9284358304.">
@@ -81,24 +81,25 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   <style>
     :root {
-      --steel: #0c1a30;
-      --deep: #081120;
-      --orange: #f47c20;
-      --orange2: #e06010;
+      --steel: #060606;
+      --deep: #000000;
+      --orange: #ffffff;
+      --orange2: #d3d6db;
       --blue: #1a6ea0;
       --solar: #f5a623;
       --solar2: #e8920e;
       --solargreen: #27ae60;
-      --light: #f1f5fb;
-      --muted: #93a6c2;
-      --card: #12233d;
-      --border: #23385a;
-      --navy: #142a4d;
-      --navy2: #081120;
+      --light: #f4f6fa;
+      --muted: #9aa0aa;
+      --card: #131313;
+      --border: #2b2b2b;
+      --navy: #0a0a0a;
+      --navy2: #000000;
+      --on-accent: #0a0a0a;
       --highlight: #ffb547;
-      --shadow-orange: 0 14px 34px rgba(244,124,32,0.32);
+      --shadow-orange: 0 14px 34px rgba(255,255,255,0.18);
       --shadow-solar: 0 14px 34px rgba(245,166,35,0.32);
-      --shadow-soft: 0 20px 50px rgba(0,0,0,0.4);
+      --shadow-soft: 0 20px 50px rgba(0,0,0,0.5);
       --gap-xl: clamp(60px,8vw,120px);
     }
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -114,15 +115,16 @@
     /* ── DIVISION SHOWCASE ── */
     .division-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-soft);}
     .division-card{padding:40px 36px;position:relative;overflow:hidden;}
-    .division-card.compressor{background:linear-gradient(135deg,var(--card),#2a2013);border-right:1px solid var(--border);}
-    .division-card.solar{background:linear-gradient(135deg,var(--card),#16281c);}
+    .division-card.compressor{background:linear-gradient(135deg,var(--card),#241c14);border-right:1px solid var(--border);}
+    .division-card.solar{background:linear-gradient(135deg,var(--card),#122019);}
     .division-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;opacity:0.08;}
     .division-card.compressor::before{background:var(--orange);}
     .division-card.solar::before{background:var(--solar);}
     .div-icon{width:60px;height:60px;border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
     .div-icon.orange{background:linear-gradient(135deg,var(--orange),var(--orange2));}
     .div-icon.yellow{background:linear-gradient(135deg,var(--solar),#d4820a);}
-    .div-icon i{color:#fff;font-size:26px;}
+    .div-icon i{color:var(--on-accent);font-size:26px;}
+    .div-icon.yellow i{color:#fff;}
     .div-label{font-size:0.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
     .div-label.orange{color:var(--orange);}
     .div-label.yellow{color:var(--solar);}
@@ -131,7 +133,7 @@
     .div-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
     .div-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:5px 14px;border-radius:20px;font-size:0.78rem;font-weight:600;color:var(--light);text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;transition:background 0.2s,border-color 0.2s;}
     .div-pill:hover{background:rgba(255,255,255,0.12);}
-    .div-pill.orange{border-color:rgba(244,124,32,0.4);color:var(--orange);}
+    .div-pill.orange{border-color:rgba(255,255,255,0.4);color:var(--orange);}
     .div-pill.yellow{border-color:rgba(245,166,35,0.4);color:var(--solar);}
     .div-pill.yellow:hover{background:rgba(245,166,35,0.12);}
     .solar-subsidy-badge{cursor:pointer;transition:background 0.2s;}
@@ -141,7 +143,7 @@
     .solar-subsidy-badge span{font-size:0.88rem;font-weight:600;color:#27ae60;}
 
     /* ── SOLAR PAGE ── */
-    .solar-hero-section{padding:80px 5%;background:linear-gradient(135deg,#0a1a12,#0c1a30);position:relative;overflow:hidden;}
+    .solar-hero-section{padding:80px 5%;background:linear-gradient(135deg,#0a120e,#060606);position:relative;overflow:hidden;}
     .solar-hero-section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 50%,rgba(245,166,35,0.08) 0%,transparent 60%);}
     .solar-features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:26px;}
     .solar-feature-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden;box-shadow:var(--shadow-soft);}
@@ -154,7 +156,7 @@
     .sfc-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;}
     .solar-stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border-radius:6px;overflow:hidden;margin-top:40px;}
     .ss-box{background:var(--card);padding:28px 20px;text-align:center;transition:background 0.3s;}
-    .ss-box:hover{background:#1a3358;}
+    .ss-box:hover{background:#1c1c1c;}
     .ss-num{font-family:'Poppins',sans-serif;font-size:2.3rem;font-weight:900;color:var(--solar);text-shadow:0 0 24px rgba(245,166,35,0.35);}
     .ss-label{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
     .solar-brands{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;}
@@ -194,17 +196,17 @@
     ::-webkit-scrollbar-thumb{background:var(--orange);border-radius:3px;}
 
     /* ── NAV ── */
-    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(8,17,32,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 5%;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(0,0,0,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 5%;}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;}
     .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
     .logo-icon{width:44px;height:44px;background:var(--orange);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;}
-    .logo-icon i{color:#fff;font-size:18px;}
+    .logo-icon i{color:var(--on-accent);font-size:18px;}
     .logo-text{font-family:'Poppins',sans-serif;font-weight:900;font-size:1.4rem;color:var(--light);letter-spacing:1px;line-height:1.1;}
     .logo-text span{color:var(--orange);display:block;font-size:0.7rem;font-weight:600;letter-spacing:3px;}
     .nav-links{display:flex;gap:4px;list-style:none;}
-    .nav-links a{color:var(--light);text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:color 0.25s,background 0.25s;}
-    .nav-links a:hover,.nav-links a.active{color:var(--orange);background:rgba(244,124,32,0.1);}
-    .nav-cta{background:var(--orange);color:#fff;padding:12px 24px;border-radius:999px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.92rem;letter-spacing:0.2px;transition:all 0.3s cubic-bezier(.2,.8,.2,1);white-space:nowrap;}
+    .nav-links a{color:var(--light);text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.95rem;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:3px;transition:color 0.25s,background 0.25s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+    .nav-links a:hover,.nav-links a.active{color:var(--orange);background:rgba(255,255,255,0.1);}
+    .nav-cta{background:var(--orange);color:var(--on-accent);padding:12px 24px;border-radius:999px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.92rem;letter-spacing:0.2px;transition:all 0.3s cubic-bezier(.2,.8,.2,1);white-space:nowrap;}
     .nav-cta:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:var(--shadow-orange);}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
     .hamburger span{width:26px;height:2px;background:var(--light);border-radius:2px;transition:0.3s;}
@@ -264,11 +266,11 @@
   opacity:0.45;
   pointer-events:none;
 }
-    .hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(244,124,32,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(244,124,32,0.8) 1px,transparent 1px);background-size:60px 60px;}
+    .hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(rgba(255,255,255,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.8) 1px,transparent 1px);background-size:60px 60px;}
     .hero-glow{position:absolute;top:-100px;right:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(26,110,160,0.25) 0%,transparent 70%);pointer-events:none;}
-    .hero-glow2{position:absolute;bottom:-50px;left:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(244,124,32,0.12) 0%,transparent 70%);pointer-events:none;}
+    .hero-glow2{position:absolute;bottom:-50px;left:5%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,0.12) 0%,transparent 70%);pointer-events:none;}
     .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,124,32,0.1);border:1px solid rgba(244,124,32,0.45);color:var(--orange);padding:8px 20px;border-radius:999px;font-family:'Poppins',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.45);color:var(--orange);padding:8px 20px;border-radius:999px;font-family:'Poppins',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;}
     .hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);flex-shrink:0;}
     .hero-badge i{font-size:0.7rem;}
     @keyframes heroRise{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
@@ -283,7 +285,7 @@
     .hero-desc{color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:36px;max-width:480px;}
     .hero-btns{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:8px;}
     .btn-primary,.btn-outline{margin:10px 14px 10px 0;}
-    .btn-primary{background:var(--orange);color:#fff;padding:18px 38px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem;letter-spacing:0.2px;border-radius:999px;transition:all 0.3s cubic-bezier(.2,.8,.2,1);display:inline-flex;align-items:center;gap:10px;position:relative;}
+    .btn-primary{background:var(--orange);color:var(--on-accent);padding:18px 38px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem;letter-spacing:0.2px;border-radius:999px;transition:all 0.3s cubic-bezier(.2,.8,.2,1);display:inline-flex;align-items:center;gap:10px;position:relative;}
     .btn-primary i,.btn-outline i{transition:transform 0.3s ease;}
     .btn-primary:hover{background:var(--orange2);transform:translateY(-3px);box-shadow:var(--shadow-orange);}
     .btn-primary:hover i{transform:translateX(5px);}
@@ -292,8 +294,8 @@
     .btn-outline:hover i{transform:translateX(5px);}
     .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-top:56px;}
     .stat-box{background:var(--card);padding:26px 16px;text-align:center;transition:background 0.3s;}
-    .stat-box:hover{background:#1a3358;}
-    .stat-num{font-family:'Poppins',sans-serif;font-size:2.3rem;font-weight:900;color:var(--orange);text-shadow:0 0 24px rgba(244,124,32,0.35);}
+    .stat-box:hover{background:#1c1c1c;}
+    .stat-num{font-family:'Poppins',sans-serif;font-size:2.3rem;font-weight:900;color:var(--orange);text-shadow:0 0 24px rgba(255,255,255,0.35);}
     .stat-label{font-size:0.72rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
     .hero-visual{position:relative;}
     .hero-card-stack{display:flex;flex-direction:column;gap:16px;}
@@ -303,7 +305,7 @@
     .hero-feature-card:nth-child(4){animation-delay:0.3s;}
     .hero-feature-card:hover{border-color:var(--orange);transform:translateX(-4px);}
     .hfc-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-    .hfc-icon i{color:#fff;font-size:20px;}
+    .hfc-icon i{color:var(--on-accent);font-size:20px;}
     .hfc-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.5px;color:var(--light);}
     .hfc-sub{font-size:0.78rem;color:var(--muted);margin-top:2px;}
     @keyframes slideInRight{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:translateX(0);}}
@@ -311,7 +313,7 @@
     /* ── SECTION COMMON ── */
     section{padding:var(--gap-xl) 5%;scroll-margin-top:90px;}
     .section-inner{max-width:1200px;margin:0 auto;}
-    .section-tag{display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;background:rgba(244,124,32,0.1);border:1px solid currentColor;opacity:1;padding:6px 18px;border-radius:999px;}
+    .section-tag{display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;background:rgba(255,255,255,0.1);border:1px solid currentColor;opacity:1;padding:6px 18px;border-radius:999px;}
     .section-tag::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0;}
     .section-title{font-family:'Poppins',sans-serif;font-size:clamp(2.1rem,4.2vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.5px;margin-bottom:26px;}
     .section-subtitle{color:var(--muted);font-size:1.05rem;line-height:1.8;max-width:620px;margin-bottom:8px;}
@@ -329,8 +331,8 @@
     .ah-item p{font-size:0.78rem;color:var(--muted);line-height:1.5;}
     .about-visual{position:relative;}
     .about-img-box{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;}
-    .about-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(244,124,32,0.1),rgba(26,110,160,0.1));}
-    .about-img-icon{font-size:5rem;color:rgba(244,124,32,0.3);}
+    .about-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.1),rgba(26,110,160,0.1));}
+    .about-img-icon{font-size:5rem;color:rgba(255,255,255,0.3);}
     .about-info-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border-radius:4px;overflow:hidden;margin-top:16px;box-shadow:var(--shadow-soft);}
     .ais-item{background:var(--card);padding:16px;text-align:center;}
     .ais-item .num{font-family:'Poppins',sans-serif;font-size:1.6rem;font-weight:900;color:var(--orange);}
@@ -351,8 +353,8 @@
     .product-card:hover{border-color:var(--orange);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.4);}
     .product-img{height:160px;background:linear-gradient(135deg,var(--deep),var(--card));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
     .product-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,0.5));}
-    .product-img i{font-size:3.5rem;color:rgba(244,124,32,0.4);position:relative;z-index:1;}
-    .product-img .badge{position:absolute;top:12px;right:12px;background:var(--orange);color:#fff;font-family:'Poppins',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:2px;z-index:2;}
+    .product-img i{font-size:3.5rem;color:rgba(255,255,255,0.4);position:relative;z-index:1;}
+    .product-img .badge{position:absolute;top:12px;right:12px;background:var(--orange);color:var(--on-accent);font-family:'Poppins',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:2px;z-index:2;}
     .product-body{padding:20px;}
     .product-body h3{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:0.5px;margin-bottom:8px;}
     .product-body p{font-size:0.82rem;color:var(--muted);line-height:1.6;margin-bottom:14px;}
@@ -403,8 +405,8 @@
     .video-card{background:var(--card);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;}
     .video-card:hover{border-color:var(--orange);transform:translateY(-3px);}
     .video-thumb{height:130px;background:linear-gradient(135deg,#0a1520,#142030);display:flex;align-items:center;justify-content:center;position:relative;}
-    .play-btn{width:50px;height:50px;background:rgba(244,124,32,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
-    .play-btn i{color:#fff;font-size:1.2rem;margin-left:4px;}
+    .play-btn{width:50px;height:50px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;}
+    .play-btn i{color:var(--on-accent);font-size:1.2rem;margin-left:4px;}
     .video-card:hover .play-btn{background:var(--orange);transform:scale(1.1);}
     .video-info{padding:14px;}
     .video-info h4{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.92rem;letter-spacing:0.3px;line-height:1.3;}
@@ -416,7 +418,7 @@
     .why-list{display:flex;flex-direction:column;gap:20px;}
     .why-item{display:flex;gap:18px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:6px;transition:border-color 0.3s;}
     .why-item:hover{border-color:var(--orange);}
-    .why-num{font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:900;color:rgba(244,124,32,0.2);line-height:1;flex-shrink:0;width:40px;}
+    .why-num{font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:900;color:rgba(255,255,255,0.2);line-height:1;flex-shrink:0;width:40px;}
     .why-text h4{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:6px;}
     .why-text p{font-size:0.83rem;color:var(--muted);line-height:1.6;}
     .why-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
@@ -428,7 +430,7 @@
     .industries-section{margin-top:56px;}
     .industries-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:18px;margin-top:32px;}
     .ind-card{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:20px 12px;text-align:center;transition:border-color 0.3s,background 0.3s,transform 0.3s;}
-    .ind-card:hover{border-color:var(--orange);background:rgba(244,124,32,0.05);transform:translateY(-5px);}
+    .ind-card:hover{border-color:var(--orange);background:rgba(255,255,255,0.05);transform:translateY(-5px);}
     .ind-card i{font-size:1.5rem;color:var(--orange);margin-bottom:8px;display:block;}
     .ind-card span{font-family:'Poppins',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.5px;}
 
@@ -437,7 +439,7 @@
     .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;}
     .contact-info-block{display:flex;flex-direction:column;gap:16px;}
     .ci-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;display:flex;align-items:flex-start;gap:16px;box-shadow:var(--shadow-soft);}
-    .ci-card .ci-icon{width:44px;height:44px;background:rgba(244,124,32,0.1);border:1px solid rgba(244,124,32,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .ci-card .ci-icon{width:44px;height:44px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .ci-card .ci-icon i{color:var(--orange);}
     .ci-card h4{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
     .ci-card p,.ci-card a{font-size:0.88rem;color:var(--light);text-decoration:none;line-height:1.7;}
@@ -451,7 +453,7 @@
     .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--orange);}
     .form-group textarea{resize:vertical;min-height:110px;}
     .form-group select option{background:var(--steel);}
-    .form-submit{width:100%;background:var(--orange);color:#fff;border:none;padding:18px;font-family:'Poppins',sans-serif;font-weight:600;font-size:1.02rem;letter-spacing:0.2px;border-radius:999px;cursor:pointer;transition:all 0.3s cubic-bezier(.2,.8,.2,1);margin-top:8px;}
+    .form-submit{width:100%;background:var(--orange);color:var(--on-accent);border:none;padding:18px;font-family:'Poppins',sans-serif;font-weight:600;font-size:1.02rem;letter-spacing:0.2px;border-radius:999px;cursor:pointer;transition:all 0.3s cubic-bezier(.2,.8,.2,1);margin-top:8px;}
     .form-submit:hover{background:var(--orange2);transform:translateY(-3px);box-shadow:var(--shadow-orange);}
     .map-container{margin-top:40px;border:1px solid var(--border);border-radius:8px;overflow:hidden;height:320px;}
     .map-container iframe{width:100%;height:100%;border:none;filter:grayscale(30%) brightness(0.85);}
@@ -460,7 +462,7 @@
     .indiamart-strip p{font-size:0.83rem;color:var(--muted);margin-top:4px;}
     .indiamart-btns{display:flex;gap:16px;flex-wrap:wrap;}
     .btn-im{padding:13px 24px;border-radius:999px;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600;font-size:0.85rem;letter-spacing:0.2px;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s cubic-bezier(.2,.8,.2,1);}
-    .btn-im.orange{background:var(--orange);color:#fff;}
+    .btn-im.orange{background:var(--orange);color:var(--on-accent);}
     .btn-im.orange:hover{background:var(--orange2);transform:translateY(-3px);box-shadow:var(--shadow-orange);}
     .btn-im.outline{border:1px solid var(--border);color:var(--light);}
     .btn-im.outline:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-3px);}
@@ -473,7 +475,7 @@
     .footer-brand p{font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:20px;}
     .social-links{display:flex;gap:10px;}
     .social-links a{width:36px;height:36px;background:var(--card);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:background 0.25s,border-color 0.25s,color 0.25s;text-decoration:none;}
-    .social-links a:hover{background:var(--orange);border-color:var(--orange);color:#fff;}
+    .social-links a:hover{background:var(--orange);border-color:var(--orange);color:var(--on-accent);}
     .footer-col h4{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:18px;}
     .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
     .footer-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.25s;display:flex;align-items:center;gap:6px;}
@@ -499,8 +501,8 @@
 
     /* ── CALL BAR ── */
     .call-bar{background:linear-gradient(135deg,var(--orange),var(--orange2));padding:12px 5%;text-align:center;}
-    .call-bar p{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;color:#fff;}
-    .call-bar a{color:#fff;text-decoration:underline;}
+    .call-bar p{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;letter-spacing:1px;color:var(--on-accent);}
+    .call-bar a{color:var(--on-accent);text-decoration:underline;}
 
     /* ── TRUST STRIP ── */
     .trust-strip{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 5%;}
@@ -529,7 +531,7 @@
     }
 
     /* mobile menu */
-    #mobileMenu{display:none;position:fixed;inset:0;background:rgba(8,17,32,0.99);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
+    #mobileMenu{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.99);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px;}
     #mobileMenu.open{display:flex;}
     #mobileMenu a{color:var(--light);text-decoration:none;font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:color 0.2s;}
     #mobileMenu a:hover{color:var(--orange);}
@@ -546,7 +548,7 @@
     /* highlight text utilities */
     .text-highlight{color:var(--highlight);font-weight:800;}
     .text-navy{color:var(--navy);}
-    ::selection{background:var(--orange);color:#fff;}
+    ::selection{background:var(--orange);color:var(--on-accent);}
 
     /* GPU-compositing hints for animated elements */
     .hero-feature-card,.product-card,.service-card,.why-item,.wv-card,.ind-card,.video-card{will-change:transform;}
@@ -753,7 +755,7 @@
           <div class="hero-feature-card"><div class="hfc-icon"><i class="fas fa-wind"></i></div><div><div class="hfc-title">Compressor Piping Services</div><div class="hfc-sub">GI, Aluminium, MS, SS &amp; PEX</div></div></div>
           <div class="hero-feature-card"><div class="hfc-icon"><i class="fas fa-bolt"></i></div><div><div class="hfc-title">GOVERMENT ELECTRICAL CONTRACT'S</div><div class="hfc-sub">MSEDCL Certified Partner</div></div></div>
           <div class="hero-feature-card"><div class="hfc-icon"><i class="fas fa-tools"></i></div><div><div class="hfc-title">Compressor AMC &amp; Multi-Brand Compressor's Servicing</div><div class="hfc-sub">All Compressor Brands</div></div></div>
-          <div class="hero-feature-card" style="border-color:rgba(245,166,35,0.4);"><div class="hfc-icon" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-sun"></i></div><div><div class="hfc-title" style="color:var(--solar);">PM Surya Ghar Rooftop Solar</div><div class="hfc-sub">Waaree &amp; Adani · ₹78,000 Subsidy for 3kW</div></div></div>
+          <div class="hero-feature-card" style="border-color:rgba(245,166,35,0.4);"><div class="hfc-icon" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-sun" style="color:#fff;"></i></div><div><div class="hfc-title" style="color:var(--solar);">PM Surya Ghar Rooftop Solar</div><div class="hfc-sub">Waaree &amp; Adani · ₹78,000 Subsidy for 3kW</div></div></div>
         </div>
       </div>
     </div>
@@ -809,7 +811,7 @@
             <a href="#" class="div-pill" onclick="goSolar('solar-brands');return false;">Waaree Solar</a>
             <a href="#" class="div-pill" onclick="goSolar('solar-brands');return false;">Adani Solar</a>
           </div>
-          <a href="#" class="btn-primary" onclick="showPage('solar')" style="background:linear-gradient(135deg,var(--solar),#d4820a);font-size:0.88rem;padding:12px 24px;"><i class="fas fa-sun"></i> Solar Services</a>
+          <a href="#" class="btn-primary" onclick="showPage('solar')" style="background:linear-gradient(135deg,var(--solar),#d4820a);font-size:0.88rem;padding:12px 24px;color:#fff;"><i class="fas fa-sun"></i> Solar Services</a>
         </div>
       </div>
     </div>
@@ -921,7 +923,7 @@
   <div style="padding-top:66px;"></div>
   <section id="about" style="padding-top:60px;position:relative;">
   <div class="about-page-bg"></div>
-  <div style="position:fixed;inset:0;background:rgba(8,17,32,0.72);z-index:1;pointer-events:none;"></div>
+  <div style="position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:1;pointer-events:none;"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
       <div class="section-header">
         <div class="section-tag">About Us</div>
@@ -992,7 +994,7 @@
   <div style="padding-top:66px;"></div>
   <section id="products" style="padding-top:60px;position:relative;">
   <div class="products-page-bg"></div>
-  <div style="position:fixed;inset:0;background:rgba(8,17,32,0.72);z-index:1;pointer-events:none;"></div>
+  <div style="position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:1;pointer-events:none;"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
       <div class="section-header">
         <div class="section-tag">Product Catalogue</div>
@@ -1062,7 +1064,7 @@
   <div style="padding-top:66px;"></div>
   <section id="services" style="padding-top:60px;position:relative;">
   <div class="services-page-bg"></div>
-  <div style="position:fixed;inset:0;background:rgba(8,17,32,0.72);z-index:1;pointer-events:none;"></div>
+  <div style="position:fixed;inset:0;background:rgba(0,0,0,0.72);z-index:1;pointer-events:none;"></div>
     <div class="section-inner" style="position:relative;z-index:2;">
       <div class="section-header">
         <div class="section-tag">Industrial Services</div>
@@ -1178,7 +1180,7 @@
           <p>Complete pneumatic piping solutions using GI, Aluminium, MS, SS pipes for industrial air distribution networks ensuring optimal performance and durability.</p>
         </div>
         <div class="service-card">
-          <div class="service-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--deep),var(--card));"><i class="fas fa-layer-group" style="font-size:3rem;color:rgba(244,124,32,0.5);"></i></div>
+          <div class="service-img" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--deep),var(--card));"><i class="fas fa-layer-group" style="font-size:3rem;color:rgba(255,255,255,0.5);"></i></div>
           <h3>Aluminium Flex Composite Pipe (PEX)</h3>
           <p>High-quality aluminium flex composite (PEX) pipes for superior pneumatic systems with corrosion resistance and long service life.</p>
         </div>
@@ -1214,7 +1216,7 @@
   <div style="padding-top:66px;"></div>
   <section id="contact" style="padding-top:60px;position:relative;">
   <div class="contact-page-bg"></div>
-  <div style="position:fixed;inset:0;background:rgba(8,17,32,0.78);z-index:1;pointer-events:none;"></div>
+  <div style="position:fixed;inset:0;background:rgba(0,0,0,0.78);z-index:1;pointer-events:none;"></div>
   <div style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 5%;">
         <h2 class="section-title">Get In Touch</h2>
         <p class="section-subtitle">Reach out for product enquiries, service requests, quotations, or general information. We're happy to help.</p>
@@ -1284,7 +1286,7 @@
         <h2 class="section-title">Jalgaon District's Leading Solar EPC Company — <span style="color:var(--solar);">PM Surya Ghar Partner</span></h2>
         <p class="section-subtitle">End-to-end Engineering, Procurement &amp; Construction (EPC) for rooftop solar — design, government subsidy paperwork, installation and net metering, all under one roof. Authorized vendor under PM Surya Ghar Muft Bijli Yojana. Waaree &amp; Adani Solar systems. ₹78,000 subsidy for 3kW. Free site survey across Jalgaon district.</p>
         <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="tel:+919284358304" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-phone"></i> Free Site Survey — Call Now</a>
+          <a href="tel:+919284358304" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);color:#fff;"><i class="fas fa-phone"></i> Free Site Survey — Call Now</a>
           <a href="https://wa.me/919284358304?text=I%20want%20to%20enquire%20about%20PM%20Surya%20Ghar%20Solar%20Installation" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</a>
         </div>
       </div>
@@ -1448,7 +1450,7 @@
               <div class="emi-row"><span>Loan Amount</span><b id="emiLoanAmt">₹0</b></div>
               <div class="emi-row" style="border-top:1px solid var(--border);margin-top:6px;padding-top:14px;"><span>Monthly EMI</span><b id="emiMonthly" style="font-size:1.3rem;">₹0</b></div>
               <div class="emi-row"><span>Total Interest Payable</span><b id="emiInterest">₹0</b></div>
-              <div style="margin-top:16px;"><a href="https://wa.me/919284358304?text=Hi%2C%20I%27d%20like%20to%20discuss%20solar%20loan%20EMI%20options" target="_blank" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);width:100%;justify-content:center;display:flex;font-size:0.85rem;"><i class="fab fa-whatsapp"></i> Discuss Financing on WhatsApp</a></div>
+              <div style="margin-top:16px;"><a href="https://wa.me/919284358304?text=Hi%2C%20I%27d%20like%20to%20discuss%20solar%20loan%20EMI%20options" target="_blank" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);width:100%;justify-content:center;display:flex;font-size:0.85rem;color:#fff;"><i class="fab fa-whatsapp"></i> Discuss Financing on WhatsApp</a></div>
             </div>
           </div>
         </div>
@@ -1508,7 +1510,7 @@
         <h3 style="font-family:'Poppins',sans-serif;font-size:1.6rem;font-weight:800;color:var(--solar);margin-bottom:10px;"><i class="fas fa-sun" style="margin-right:8px;"></i>Get Your Free Solar Consultation Today</h3>
         <p style="color:var(--muted);margin-bottom:20px;font-size:0.9rem;">Jalgaon &amp; Pune | GSTIN: 27BNSPT7176A1ZF | +91 9284358304</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
-          <a href="tel:+919284358304" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);"><i class="fas fa-phone"></i> +91 9284358304</a>
+          <a href="tel:+919284358304" class="btn-primary" style="background:linear-gradient(135deg,var(--solar),#d4820a);color:#fff;"><i class="fas fa-phone"></i> +91 9284358304</a>
           <a href="https://wa.me/919284358304?text=I%20want%20to%20enquire%20about%20PM%20Surya%20Ghar%20Solar%20Installation" target="_blank" class="btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</a>
           <a href="#" class="btn-outline" onclick="showPage('contact')" style="border-color:rgba(245,166,35,0.4);color:var(--solar);"><i class="fas fa-envelope"></i> Send Enquiry</a>
         </div>
